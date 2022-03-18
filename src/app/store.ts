@@ -1,17 +1,21 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit'
+import homePageReducer from './containers/HomePage/homePageSlice'
+import ReduxLogger from 'redux-logger'
+
+const middleware = () => getDefaultMiddleware().concat(ReduxLogger)
 
 export const store = configureStore({
+  middleware,
   reducer: {
-    counter: counterReducer,
+    homePage: homePageReducer,
   },
-});
+})
 
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,
   unknown,
   Action<string>
->;
+>
