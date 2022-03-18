@@ -8,55 +8,55 @@
 // ====================================================
 
 export interface GetAnimePage_Page_media_title {
-  __typename: "MediaTitle";
+  __typename: 'MediaTitle'
   /**
    * The official english title
    */
-  english: string | null;
+  english: string | null
 }
 
 export interface GetAnimePage_Page_media_coverImage {
-  __typename: "MediaCoverImage";
+  __typename: 'MediaCoverImage'
   /**
    * The cover image url of the media at its largest size. If this size isn't available, large will be provided instead.
    */
-  extraLarge: string | null;
+  extraLarge: string | null
 }
 
 export interface GetAnimePage_Page_media {
-  __typename: "Media";
+  __typename: 'Media'
   /**
    * The id of the media
    */
-  id: number;
+  id: number
   /**
    * Short description of the media's story and characters
    */
-  description: string | null;
+  description: string | null
   /**
    * A weighted average score of all the user's scores of the media
    */
-  averageScore: number | null;
+  averageScore: number | null
   /**
    * The official titles of the media in various languages
    */
-  title: GetAnimePage_Page_media_title | null;
+  title: GetAnimePage_Page_media_title | null
   /**
    * The cover images of the media
    */
-  coverImage: GetAnimePage_Page_media_coverImage | null;
+  coverImage: GetAnimePage_Page_media_coverImage | null
 }
 
 export interface GetAnimePage_Page {
-  __typename: "Page";
-  media: (GetAnimePage_Page_media | null)[] | null;
+  __typename: 'Page'
+  media: (GetAnimePage_Page_media | null)[] | null
 }
 
 export interface GetAnimePage {
-  Page: GetAnimePage_Page | null;
+  Page: GetAnimePage_Page | null
 }
 
 export interface GetAnimePageVariables {
-  page: number;
-  perPage: number;
+  page: number
+  perPage: number
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HomePage } from './app/containers/HomePage'
+import HomePage from './app/containers/HomePage'
 
 const AppContainer = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ const AppContainer = styled.div`
   align-items: center;
 `
 
-function App() {
+const App: React.FC = () => {
   return (
     <AppContainer>
       <HomePage />

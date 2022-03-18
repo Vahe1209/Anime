@@ -3,7 +3,8 @@ import { GET_ANIME_PAGE } from './queries'
 import { GetAnimePage } from './__generated__/GetAnimePage'
 
 class AnimeService {
-  async getAnimePage(page: Number, perPage = 5): Promise<GetAnimePage['Page']> {
+  async getAnimePage(page: number, perPage = 5): Promise<GetAnimePage['Page']> {
+    // eslint-disable-next-line no-useless-catch
     try {
       const response = await apolloClient.query({
         query: GET_ANIME_PAGE,

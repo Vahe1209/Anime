@@ -41,7 +41,7 @@ const stateSelector = createSelector(makeSelectAnimePage, (animePage) => ({
   animePage,
 }))
 
-export function HotAnime() {
+const HotAnime: React.FC = () => {
   const { animePage } = useAppSelector(stateSelector)
 
   const isEmptyAnimePage = !animePage || !animePage.media || animePage.media.length === 0
@@ -64,3 +64,5 @@ export function HotAnime() {
     </HotAnimeContainer>
   )
 }
+
+export default HotAnime

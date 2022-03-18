@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
     "reselect": "^4.0.0",
     "styled-components": "^5.2.3",
@@ -48,6 +49,14 @@
   },
   "devDependencies": {
     "@types/redux-logger": "^3.0.8",
-    "@types/styled-components": "^5.1.9"
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-import": "^0.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
   }
 }

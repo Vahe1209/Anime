@@ -1,13 +1,12 @@
 import React, { useCallback, useEffect } from 'react'
+// eslint-disable-next-line import/named
 import { Dispatch } from 'redux'
 import styled from 'styled-components'
 import { useAppDispatch } from '../../hooks'
 import animeService from '../../services/animeService'
 import { GetAnimePage } from '../../services/animeService/__generated__/GetAnimePage'
 import { setAnimePage } from './homePageSlice'
-import { HotAnime } from './hotAnime'
-
-interface IHomePageProps {}
+import HotAnime from './HotAnime'
 
 const Container = styled.div`
   width: 100%;
@@ -21,7 +20,8 @@ const actionDispatch = (dispatch: Dispatch) => ({
   setAnimePage: (page: GetAnimePage['Page']) => dispatch(setAnimePage(page)),
 })
 
-export function HomePage(props: IHomePageProps) {
+const HomePage: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   const { setAnimePage } = actionDispatch(useAppDispatch())
 
   const fetchAnimePage = useCallback(async () => {
@@ -42,3 +42,5 @@ export function HomePage(props: IHomePageProps) {
     </Container>
   )
 }
+
+export default HomePage

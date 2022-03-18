@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/indent */
+// eslint-disable-next-line import/named
 import { configureStore, ThunkAction, Action, getDefaultMiddleware } from '@reduxjs/toolkit'
 import homePageReducer from './containers/HomePage/homePageSlice'
 import ReduxLogger from 'redux-logger'

@@ -10,6 +10,7 @@ const HomePageSlice = createSlice({
   initialState,
   reducers: {
     setAnimePage(state, action) {
+      // eslint-disable-next-line no-param-reassign
       state.animePage = action.payload
     },
   },
